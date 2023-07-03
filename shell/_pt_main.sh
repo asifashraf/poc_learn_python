@@ -9,13 +9,13 @@ if [[ -z "$action" || "$action" == "--help" ]]; then
 else
  case $action in
 
-    "pull")
-        source cd-pt
+    "pt.pull")
+        source cd-pt.sh
         git pull
     ;;
 
-    "push")
-        source cd-pt
+    "pt.push")
+        source cd-pt.sh
         git add .
         git commit -m "$1"
         git push
